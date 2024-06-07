@@ -1,0 +1,126 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+const pageTitle = "私について";
+const identity = {
+  firstName: "サラ",
+  country: "カナダ",
+  occupation: "技術ライター",
+  hobbies: ["写真", "バードウォッチング", "野球"],
+};
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Astro",
+  "ドキュメントの執筆",
+];
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a href="/">ホーム</a>
+    <a href="/about/">概要</a>
+    <a href="/blog/">ブログ</a>
+    <h1>私について</h1>
+    <h2>... そして私の新しいAstroサイトについて！</h2>
+
+    <p>
+      私はAstroの入門チュートリアルを進めています。これは私のウェブサイトの2番目のページで、自分で作った初めてのページです！
+    </p>
+
+    <p>
+      このサイトはチュートリアルを進めるにつれて更新されていきます。定期的にチェックして、私の旅の様子を見に来てください！
+    </p>
+
+    <p>以下はループ処理と変数の確認です</p>
+    <ul>
+      <li>私の名前は{identity.firstName}です</li>
+      <li>
+        {identity.country}に住んでおり、{
+          identity.occupation
+        }として働いています。
+      </li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            私の2つの趣味は{identity.hobbies[0]}と{identity.hobbies[1]}です。
+          </li>
+        )
+      }
+    </ul>
+
+    <p>私のスキルは以下の通りです。</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+  </body>
+</html>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
