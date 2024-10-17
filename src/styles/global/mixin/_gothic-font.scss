@@ -1,0 +1,36 @@
+// ゴシック体フォント多言語対応
+@use 'sass:string';
+@use 'sass:selector';
+
+@mixin gothic-font() {
+  $dc: '::';
+  $sel: #{&};
+  $idx: string.index($sel, $dc);
+  $pel: '';
+
+  @if ($idx != null) {
+    $sel: string.split($sel, $dc);
+    $pel: #{$dc}#{nth($sel, 2)};
+    $sel: nth($sel, 1);
+  }
+
+  $langfont: (
+    'ja': "'Zen Kaku Gothic New'",
+    // 'en': "'Noto Sans'",
+    // 'zh-cmn-Hans': "'Noto Sans SC'",
+    // 'zh-cmn-Hant': "'Noto Sans TC'",
+    // 'ko': "'Noto Sans KR'",,,,
+  );
+
+  @each $lang, $font in $langfont {
+    @if ($idx != null) {
+      @at-root #{$sel}:lang(#{$lang})#{$pel} {
+        font-family: #{$font}, sans-serif;
+      }
+    } @else {
+      &:lang(#{$lang}) {
+        font-family: #{$font}, sans-serif;
+      }
+    }
+  }
+}

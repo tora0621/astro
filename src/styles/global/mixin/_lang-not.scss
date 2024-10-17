@@ -1,0 +1,7 @@
+// 指定言語以外
+
+@mixin lang-not($ln) {
+  &:not(:lang(#{$ln})) {
+    @content;
+  }
+}

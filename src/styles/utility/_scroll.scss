@@ -1,0 +1,12 @@
+@use '@/styles/global' as *;
+
+// テーブル横スクロール
+
+.scroll {
+  @include sumaho {
+    overflow: auto;
+    table {
+      white-space: nowrap;
+    }
+  }
+}

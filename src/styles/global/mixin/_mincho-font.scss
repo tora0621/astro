@@ -1,0 +1,36 @@
+// 明朝体フォント多言語対応
+@use 'sass:string';
+@use 'sass:selector';
+
+@mixin mincho-font() {
+  $dc: '::';
+  $sel: #{&};
+  $idx: string.index($sel, $dc);
+  $pel: '';
+
+  @if ($idx != null) {
+    $sel: string.split($sel, $dc);
+    $pel: #{$dc}#{nth($sel, 2)};
+    $sel: nth($sel, 1);
+  }
+
+  $langfont: (
+    'ja': "'Noto Serif JP'",
+    'en': "'Noto Serif'",
+    'zh-cmn-Hans': "'Noto Serif SC'",
+    'zh-cmn-Hant': "'Noto Serif TC'",
+    'ko': "'Noto Serif KR'",
+  );
+
+  @each $lang, $font in $langfont {
+    @if ($idx != null) {
+      @at-root #{$sel}:lang(#{$lang})#{$pel} {
+        font-family: #{$font}, serif;
+      }
+    } @else {
+      &:lang(#{$lang}) {
+        font-family: #{$font}, serif;
+      }
+    }
+  }
+}

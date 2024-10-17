@@ -1,0 +1,7 @@
+// 言語指定
+
+@mixin lang($ln) {
+  &:lang(#{$ln}) {
+    @content;
+  }
+}

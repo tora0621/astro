@@ -1,0 +1,95 @@
+// 変数格納用ファイル
+// 変数名はロウワーキャメルケース、変数名の前に何に対する変数かコメント必須
+//
+// 例)
+// サイト内全体背景色
+// $baseBgColor: #fff;
+
+// 各デバイスのブレークポイント
+// +1はmax-width適用の為
+$breakPoint: (
+  'sumaho': 560+1,
+  'tablet': 960+1,
+  'note': 1440+1,
+  'pc': 1920+1,
+);
+
+// 計算用のデザインPSDの実寸ピクセル幅
+$designWidth: (
+  'sumaho': 375,
+  'tablet': 768,
+  'note': 1366,
+  'pc': 1920,
+);
+
+:root {
+  --theme-color: #ffffff;
+  --theme-color-op: rgba(255, 255, 255, 0.4);
+  --theme-color-op2: rgba(255, 255, 255, 0.7);
+  --theme-color-op3: rgba(255, 255, 255, 0.9);
+  --theme-color-op4: rgba(255, 255, 255, 0.94);
+  --theme-color2: #333333;
+  --theme-color2-op: rgba(51, 51, 51, 0.1);
+  --theme-color2-op2: rgba(51, 51, 51, 0.4);
+  --theme-color2-op3: rgba(51, 51, 51, 0.7);
+  --theme-color3: #999999;
+  --theme-color4: #000000;
+  --theme-color5: #777777;
+  --theme-color6: #bc6448;
+  --theme-color7: #4980af;
+  --theme-color8: #aa0707;
+  --primary-color: #b7a678;
+  --primary-color-op: rgba(183, 166, 120, 0.1);
+  --primary-color-op2: rgba(183, 166, 120, 0.4);
+  --primary-color2: #9e8134;
+  --primary-color2-op: rgba(158, 129, 52, 0.35);
+  --primary-color2-op2: rgba(158, 129, 52, 0.5);
+  --primary-color2-op3: rgba(158, 129, 52, 0.1);
+  --primary-color2-op4: rgba(158, 129, 52, 0.8);
+  --secondary-color: #5d98c4;
+  --attention-color: #b72c2c;
+  --bg-color: #f4f4f4;
+  --bg-color2: #eef4f7;
+  --bg-color3: #f9f9f9;
+  --bg-color4: #f7f7f7;
+  --bg-color5: #ecf1f4;
+  --bg-color6: #f2f2f2;
+  --bg-color6-op: rgba(242, 242, 242, 0.7);
+  --bg-color7: #eef8ff;
+  --bg-color8: #efefef;
+  --bg-color9: #eff5f9;
+  --bg-color10: #f3ece9;
+  --bg-color11: #f0f5e7;
+  --bg-color12: #eeeef9;
+  --accen-accent: #d6e6ef;
+  --accen-accent2: #fffced;
+  --accen-accent3: #d2e1ea;
+  --accen-accent4: #ad9659;
+  --accen-accent5: #f4f2ea;
+  --accen-accent6: #f4eddd;
+  //ボーダー
+  --border-color: #cccccc;
+  --border-color2: #e4e4e4;
+  --border-color3: #c8c8c8;
+  --border-color4: #e5e5e5;
+  --border-color5: #d9d9d9;
+  --border-color6: #d2d2d2;
+  //フォント
+  --font-ja-gothic: 'Zen Kaku Gothic New', sans-serif;
+  --font-ja-gothic2: 'Zen Maru Gothic', serif;
+  --font-ja-mincho: 'Zen Old Mincho', serif;
+  --font-en: 'Cormorant Garamond', serif;
+  --font-en2: 'Cormorant Infant', serif;
+  --font-cursive: 'Great Vibes', cursive;
+  //アニメーション
+  --anim-speed: 0.24s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+//ウェディングページで上書きするスタイル
+.wedding {
+  --theme-color2: #505050;
+  --primary-color: #c1b084;
+  --primary-color-op: rgba(193, 176, 132, 0.1);
+  --primary-color-op2: rgba(193, 176, 132, 0.4);
+  --secondary-color: #94b8d7;
+}
