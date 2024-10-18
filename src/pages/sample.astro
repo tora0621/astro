@@ -1,23 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-// Layout.astro
-// import { functionA } from "../utils/functionA";
-
-// 関数を使用
-// const resultA = functionA();
-// console.log(resultA);
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <div class="section">
+    <div>
+      <a href="#section1">section1</a>
+      <a href="#section2">section2</a>
+      <a href="#section3">section3</a>
+    </div>
+    <div class="section" id="section1">
       <div class="division">コンテンツ</div>
       <div class="division none">汎用クラス確認</div>
       <div class="division flex">
         <div class="flex-1">Tailwind確認用</div>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="division">コンテンツ2</div>
+      <div class="division">smoothscroll</div>
+      <div class="division flex">
         <div class="flex-1">Tailwind確認用</div>
       </div>
+    </div>
+    <div class="section" id="section3">
+      <div class="division">コンテンツ3</div>
+      <div class="division">smoothscroll</div>
     </div>
   </main>
 </Layout>

@@ -24,8 +24,6 @@ const { title } = Astro.props;
 
 <script>
   //共通処理読み込み
-  import functionA from "src/utils/functionA";
-  import functionB from "src/utils/functionB";
-  functionA();
-  functionB();
+  import { index } from "src/ts/index";
+  index();
 </script>

@@ -3,14 +3,19 @@
 // @use 'tailwindcss/components';
 // @use 'tailwindcss/utilities';
 
-@use 'foundation';
-@use 'utility';
+@use "foundation";
+@use "utility";
 // @use 'parts';
 
 //確認用
 
-
 .section {
-	// background-color: red;
-	padding: 4rem;
+  // background-color: red;
+  padding: 4rem;
+  height: 100rem;
+}
+
+// スムーススクロール
+html {
+  scroll-behavior: smooth;
 }

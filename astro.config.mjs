@@ -9,14 +9,6 @@ import path from 'path';
 export default defineConfig({
   integrations: [tailwind()],
   vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          entryFileNames: "js/app.js",
-        },
-      },
-      minify: false,
-    },
     resolve: {
       alias: {
         // srcを@として設定
@@ -27,7 +19,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           api: 'modern-compiler',
-          // mixinなどをpage全体で使いたいとき用
+          // mixinなどをpage全体で使いたいとき
           // additionalData: `@use "src/styles/style.scss";`
         }
       }
