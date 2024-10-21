@@ -19,8 +19,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           api: 'modern-compiler',
-          // mixinなどをpage全体で使いたいとき
-          // additionalData: `@use "src/styles/style.scss";`
+          additionalData: `@use "src/styles/style.scss";`,
         },
       },
     },

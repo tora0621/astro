@@ -1,0 +1,17 @@
+@use '@/styles/global' as *;
+
+body {
+  font-feature-settings: 'palt';
+  color: var(--theme-color2);
+  // opacity: 0;
+  transition: opacity 0.7s ease-in;
+  @include sumaho {
+    font-size: 1.3rem;
+  }
+  &.is-lock {
+    overflow: hidden;
+  }
+  &.is-loaded {
+    opacity: 1;
+  }
+}

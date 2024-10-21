@@ -85,11 +85,3 @@ $designWidth: (
   --anim-speed: 0.24s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
-//ウェディングページで上書きするスタイル
-.wedding {
-  --theme-color2: #505050;
-  --primary-color: #c1b084;
-  --primary-color-op: rgba(193, 176, 132, 0.1);
-  --primary-color-op2: rgba(193, 176, 132, 0.4);
-  --secondary-color: #94b8d7;
-}
