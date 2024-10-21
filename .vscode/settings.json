@@ -24,6 +24,10 @@
     "editor.defaultFormatter": "vscode.html-language-features",
     "files.insertFinalNewline": true
   },
+  "prettier.documentSelectors": ["src/pages/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "emmet.includeLanguages": {
     "typescript": "html",
     "php": "html"

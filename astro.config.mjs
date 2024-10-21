@@ -21,8 +21,8 @@ export default defineConfig({
           api: 'modern-compiler',
           // mixinなどをpage全体で使いたいとき
           // additionalData: `@use "src/styles/style.scss";`
-        }
-      }
-    }
+        },
+      },
+    },
   },
 });

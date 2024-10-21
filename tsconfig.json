@@ -1,12 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    // "skipLibCheck": true,
+    // "moduleResolution": "node",
+    // "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     // パスのshortcut
     "paths": {
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
-      "@ts/*": ["src/ts/*"],
+      "@ts/*": ["src/ts/*"]
     }
   }
 }

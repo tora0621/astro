@@ -25,11 +25,15 @@
   @each $lang, $font in $langfont {
     @if ($idx != null) {
       @at-root #{$sel}:lang(#{$lang})#{$pel} {
-        font-family: #{$font}, serif;
+        font-family:
+          #{$font},
+          serif;
       }
     } @else {
       &:lang(#{$lang}) {
-        font-family: #{$font}, serif;
+        font-family:
+          #{$font},
+          serif;
       }
     }
   }

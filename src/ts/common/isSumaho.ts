@@ -1,4 +1,4 @@
-import { breakPoint } from "./var";
+import { breakPoint } from './var';
 /**
  * @description スマホ表示であるか判定
  * @returns {boolean} 閲覧デバイスのブラウザ幅がスマホのブレークポイント以内あればtrue,それ以外はfalse

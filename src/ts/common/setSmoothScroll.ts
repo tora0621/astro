@@ -33,7 +33,7 @@ function ankerScroll(href: string): void {
   const target = href === '#' || href === undefined || href === '' ? document.documentElement : document.querySelector(href);
   const header = document.querySelector('.header') as HTMLElement;
   const fix = header ? header.offsetHeight : 0;
-  const top = (target ? target.getBoundingClientRect().top + window.pageYOffset : 0) - fix;
+  const top = (target ? target.getBoundingClientRect().top + window.scrollY : 0) - fix;
   window.scrollTo({
     top: top,
     behavior: 'smooth',

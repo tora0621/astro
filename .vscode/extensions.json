@@ -24,6 +24,6 @@
     "mrmlnc.vscode-scss", // SCSSの自動補完
     "simonsiefke.svg-preview", // SVGファイルビュワー
     "hookyqr.minify" // CSS,HTML等のミニファイ化
-],
+  ],
   "unwantedRecommendations": []
 }
